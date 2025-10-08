@@ -77,11 +77,32 @@ function App() {
     setSelectedPOP(pop)
     setCurrentView('detail')
     setMenuOpen(false)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   const handleBackToHome = () => {
     setCurrentView('home')
     setSelectedPOP(null)
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const scrollToSection = (sectionId) => {
+    setMenuOpen(false)
+    if (currentView !== 'home') {
+      setCurrentView('home')
+      setSelectedPOP(null)
+      setTimeout(() => {
+        const element = document.getElementById(sectionId)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+      }, 100)
+    } else {
+      const element = document.getElementById(sectionId)
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }
   }
 
   return (
@@ -113,15 +134,24 @@ function App() {
                 <Home size={18} />
                 <span>Início</span>
               </button>
-              <button className="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-all">
+              <button 
+                onClick={() => scrollToSection('pops-section')}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-all"
+              >
                 <FileText size={18} />
                 <span>POPs</span>
               </button>
-              <button className="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-all">
+              <button 
+                onClick={() => scrollToSection('analises-section')}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-all"
+              >
                 <BarChart3 size={18} />
                 <span>Análises</span>
               </button>
-              <button className="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-all">
+              <button 
+                onClick={() => scrollToSection('processos-section')}
+                className="flex items-center gap-2 px-4 py-2 rounded-lg text-slate-600 hover:bg-slate-100 transition-all"
+              >
                 <GitBranch size={18} />
                 <span>Processos</span>
               </button>
@@ -146,15 +176,24 @@ function App() {
                 <Home size={18} />
                 <span>Início</span>
               </button>
-              <button className="flex items-center gap-2 px-4 py-3 w-full text-left rounded-lg hover:bg-slate-100 transition-all">
+              <button 
+                onClick={() => scrollToSection('pops-section')}
+                className="flex items-center gap-2 px-4 py-3 w-full text-left rounded-lg hover:bg-slate-100 transition-all"
+              >
                 <FileText size={18} />
                 <span>POPs</span>
               </button>
-              <button className="flex items-center gap-2 px-4 py-3 w-full text-left rounded-lg hover:bg-slate-100 transition-all">
+              <button 
+                onClick={() => scrollToSection('analises-section')}
+                className="flex items-center gap-2 px-4 py-3 w-full text-left rounded-lg hover:bg-slate-100 transition-all"
+              >
                 <BarChart3 size={18} />
                 <span>Análises</span>
               </button>
-              <button className="flex items-center gap-2 px-4 py-3 w-full text-left rounded-lg hover:bg-slate-100 transition-all">
+              <button 
+                onClick={() => scrollToSection('processos-section')}
+                className="flex items-center gap-2 px-4 py-3 w-full text-left rounded-lg hover:bg-slate-100 transition-all"
+              >
                 <GitBranch size={18} />
                 <span>Processos</span>
               </button>
@@ -166,7 +205,7 @@ function App() {
       {/* Main Content */}
       <main>
         {currentView === 'home' ? (
-          <HomePage pops={pops} onPOPClick={handlePOPClick} />
+          <HomePage pops={pops} onPOPClick={handlePOPClick} onScrollToSection={scrollToSection} />
         ) : (
           <POPDetail pop={selectedPOP} onBack={handleBackToHome} />
         )}

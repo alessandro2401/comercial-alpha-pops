@@ -1,11 +1,11 @@
 import { ArrowRight, TrendingUp, AlertTriangle, Lightbulb, Target } from 'lucide-react'
 import { Button } from '@/components/ui/button.jsx'
 
-export default function HomePage({ pops, onPOPClick }) {
+export default function HomePage({ pops, onPOPClick, onScrollToSection }) {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Hero Section */}
-      <section className="text-center mb-16">
+      <section id="inicio" className="text-center mb-16">
         <div className="inline-block px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold mb-6">
           📋 Gestão de Processos Comerciais
         </div>
@@ -20,11 +20,20 @@ export default function HomePage({ pops, onPOPClick }) {
           diagramas de fluxo e propostas de otimização.
         </p>
         <div className="flex flex-wrap justify-center gap-4">
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all">
+          <Button 
+            size="lg" 
+            onClick={() => onScrollToSection('pops-section')}
+            className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all"
+          >
             Explorar POPs
             <ArrowRight className="ml-2" size={20} />
           </Button>
-          <Button size="lg" variant="outline" className="px-8 py-6 text-lg rounded-xl border-2 border-slate-300 hover:border-blue-600 hover:text-blue-600 transition-all">
+          <Button 
+            size="lg" 
+            variant="outline" 
+            onClick={() => onScrollToSection('analises-section')}
+            className="px-8 py-6 text-lg rounded-xl border-2 border-slate-300 hover:border-blue-600 hover:text-blue-600 transition-all"
+          >
             Ver Análises
           </Button>
         </div>
@@ -63,7 +72,7 @@ export default function HomePage({ pops, onPOPClick }) {
       </section>
 
       {/* POPs Grid */}
-      <section className="mb-16">
+      <section id="pops-section" className="mb-16 scroll-mt-20">
         <div className="flex items-center justify-between mb-8">
           <div>
             <h2 className="text-3xl font-bold text-slate-900 mb-2">Procedimentos Disponíveis</h2>
@@ -104,9 +113,9 @@ export default function HomePage({ pops, onPOPClick }) {
       </section>
 
       {/* Features Section */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl p-12 text-white">
+      <section id="analises-section" className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl p-12 text-white scroll-mt-20">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold mb-4">Análise Profissional de Processos</h2>
+          <h2 id="processos-section" className="text-4xl font-bold mb-4 scroll-mt-20">Análise Profissional de Processos</h2>
           <p className="text-blue-100 text-lg max-w-2xl mx-auto">
             Cada POP inclui mapeamento completo, identificação de gargalos e propostas de otimização
           </p>
