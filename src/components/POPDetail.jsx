@@ -219,9 +219,13 @@ export default function POPDetail({ pop, onBack }) {
             </div>
             <div className="bg-slate-50 rounded-xl p-4 border-2 border-slate-200">
               <img 
-                src={`/src/assets/${pop.diagram}`} 
+                src={`/diagramas/${pop.diagram}`} 
                 alt={`Diagrama do ${pop.title}`}
                 className="w-full h-auto rounded-lg"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.parentElement.innerHTML = '<div class="text-center py-8 text-slate-500">Diagrama em carregamento...</div>';
+                }}
               />
             </div>
             <p className="text-sm text-slate-500 mt-4 text-center">
