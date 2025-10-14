@@ -3,7 +3,7 @@ import { FileText, Home, BarChart3, GitBranch, Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button.jsx'
 import HomePage from './components/HomePage.jsx'
 import POPDetail from './components/POPDetail.jsx'
-import ProtectedRoute from './components/ProtectedRoute'
+// Autenticação removida - Acesso livre
 import './App.css'
 
 const pops = [
@@ -71,9 +71,7 @@ const pops = [
 
 function App() {
   return (
-    <ProtectedRoute>
-      <AppContent />
-    </ProtectedRoute>
+    <AppContent />
   )
 }
 
