@@ -119,9 +119,11 @@ function AppContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center gap-3 cursor-pointer" onClick={handleBackToHome}>
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow-md">
-                AP
-              </div>
+              <img 
+                src="/logos/alpha-logo.png" 
+                alt="Alpha Proteções" 
+                className="h-12 w-auto"
+              />
               <div>
                 <h1 className="text-xl font-bold text-slate-900">Alpha Proteções</h1>
                 <p className="text-xs text-slate-600">Procedimentos Operacionais Padrão</p>
