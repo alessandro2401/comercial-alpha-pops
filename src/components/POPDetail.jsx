@@ -160,7 +160,7 @@ export default function POPDetail({ pop, onBack }) {
       <div className={`bg-gradient-to-br ${pop.color} rounded-3xl p-8 md:p-12 text-white mb-8 shadow-xl`}>
         <div className="flex items-start justify-between mb-6">
           <div className="flex items-center gap-4">
-            <div className="text-7xl">{pop.icon}</div>
+            <div className="text-7xl" dangerouslySetInnerHTML={{ __html: pop.icon }} />
             <div>
               <div className="text-white/80 text-sm font-mono mb-2">POP-{pop.id.toString().padStart(2, '0')}</div>
               <h1 className="text-4xl md:text-5xl font-bold mb-2">{pop.title}</h1>
