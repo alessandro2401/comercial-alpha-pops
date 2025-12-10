@@ -33,7 +33,7 @@ const pops = [
     subtitle: 'Alpha Proteções',
     description: 'Padrões de atendimento, canais de comunicação e protocolos de resposta para garantir qualidade no relacionamento com clientes.',
     category: 'Atendimento',
-    icon: '💬',
+    icon: '<svg style="display: inline-block; vertical-align: middle; margin-right: 6px;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>',
     color: 'from-purple-500 to-purple-700',
     diagram: 'diagrama_pop3.png'
   },
@@ -43,7 +43,7 @@ const pops = [
     subtitle: 'Alpha Proteções',
     description: 'Uso do Power CRM para captação, qualificação de leads e gestão do funil de vendas com métricas e indicadores.',
     category: 'Vendas',
-    icon: '📊',
+    icon: '<svg style="display: inline-block; vertical-align: middle; margin-right: 6px;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>',
     color: 'from-orange-500 to-orange-700',
     diagram: 'diagrama_pop4.png'
   },
