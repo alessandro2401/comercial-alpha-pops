@@ -13,7 +13,7 @@ const pops = [
     subtitle: 'Grupo MMB',
     description: 'Procedimento padronizado para abertura, acompanhamento e resolução de chamados através da ferramenta de suporte do Uso Interno.',
     category: 'Suporte Interno',
-    icon: '🎫',
+    icon: '<svg style="display: inline-block; vertical-align: middle; margin-right: 6px;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>',
     color: 'from-blue-500 to-blue-700',
     diagram: 'diagrama_pop1.png'
   },
@@ -23,7 +23,7 @@ const pops = [
     subtitle: 'Alpha Proteções',
     description: 'Processos de RH para admissão de novos colaboradores e procedimentos de desligamento.',
     category: 'Recursos Humanos',
-    icon: '👥',
+    icon: '<svg style="display: inline-block; vertical-align: middle; margin-right: 6px;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
     color: 'from-green-500 to-green-700',
     diagram: 'diagrama_pop2.png'
   },
@@ -53,7 +53,7 @@ const pops = [
     subtitle: 'Soluções Corretora',
     description: 'Processo de venda específico para seguros auto, incluindo cotação, proposta, documentação e fechamento.',
     category: 'Vendas',
-    icon: '🚗',
+    icon: '<svg style="display: inline-block; vertical-align: middle; margin-right: 6px;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>',
     color: 'from-red-500 to-red-700',
     diagram: 'diagrama_pop5.png'
   },
@@ -63,7 +63,7 @@ const pops = [
     subtitle: 'MMB',
     description: 'Processo de venda para produtos MMB com características específicas de mutualismo e proteção solidária.',
     category: 'Vendas',
-    icon: '🤝',
+    icon: '<svg style="display: inline-block; vertical-align: middle; margin-right: 6px;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>',
     color: 'from-indigo-500 to-indigo-700',
     diagram: 'diagrama_pop6.png'
   }
