@@ -88,7 +88,7 @@ export default function HomePage({ pops, onPOPClick, onScrollToSection }) {
               className="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 cursor-pointer border border-slate-100 hover:border-blue-300 hover:-translate-y-1"
             >
               <div className={`h-32 bg-gradient-to-br ${pop.color} p-6 flex items-center justify-between`}>
-                <div className="text-6xl">{pop.icon}</div>
+                <div className="text-6xl" dangerouslySetInnerHTML={{ __html: pop.icon }} />
                 <div className="text-white/20 text-sm font-mono">POP-{pop.id.toString().padStart(2, '0')}</div>
               </div>
               <div className="p-6">
