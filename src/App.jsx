@@ -3,7 +3,8 @@ import { FileText, Home, BarChart3, GitBranch, Menu, X } from 'lucide-react'
 import { Button } from '@/components/ui/button.jsx'
 import HomePage from './components/HomePage.jsx'
 import POPDetail from './components/POPDetail.jsx'
-// Autenticação removida - Acesso livre
+import { AuthProvider, useAuth } from './contexts/AuthContext.jsx'
+import Login from './components/Login.jsx'
 import './App.css'
 
 const pops = [
@@ -71,8 +72,16 @@ const pops = [
 
 function App() {
   return (
-    <AppContent />
+    <AuthProvider>
+      <ProtectedContent />
+    </AuthProvider>
   )
+}
+
+function ProtectedContent() {
+  const { isAuthenticated } = useAuth()
+  if (!isAuthenticated) return <Login />
+  return <AppContent />
 }
 
 function AppContent() {
